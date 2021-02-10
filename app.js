@@ -73,11 +73,6 @@ function updateAllIncomeList() {
         incomeLi.appendChild(incomeLiDivButtons);
         ulIncomeList.appendChild(incomeLi);
 
-        // incomeLi.appendChild(deleteIncomeBtn);
-        // incomeLi.appendChild(editIncomeBtn);
-        // ulIncomeList.appendChild(incomeLi);
-
-
     });
 }
 
@@ -184,9 +179,6 @@ function updateAllExpensesList() {
         expensesLi.appendChild(expensesLiDivButtons); 
         ulExpensesList.appendChild(expensesLi);
 
-        // expensesLi.appendChild(deleteExpensesBtn);
-        // expensesLi.appendChild(editExpensesBtn);
-        // ulExpensesList.appendChild(expensesLi);
     });
 }
 
