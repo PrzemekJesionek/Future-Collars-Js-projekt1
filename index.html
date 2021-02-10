@@ -6,19 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
     <title>Kalkulator budżetu domowego</title>
 </head>
 
 <body>
     <header>
-        <div class="logo"><img src="https://static.thenounproject.com/png/2737878-200.png" width="200px" height="200px">
+        <div class="logo"><img src="money_logo.png" width="200px" height="200px">
         </div>
     </header>
 
 
     <main>
         <div class="money-left">
-            <h1 id="money-left-value">Aktualnie Twój budżet wynosi xxx złotych</h1>
+            <h1 id="money-left-value">Uzupełnij pola aby sprawdzić swój budżet!</h1>
         </div>
         <div class="budget">
             <div class="box">
@@ -27,9 +29,18 @@
                     <input value="" placeholder="podaj nazwę dochodu" id="new-income-name"></input>
                     <input value="" placeholder="Kwota" type="number" id="new-income-price"></input>
                     <button id="btn1">Dodaj</button>
-                    <ul id="ul-income" class="ul-separator">
+                    <div class="box-income">
+                        <ul id="ul-income" class="ul-separator">
+                
+                        </ul>
 
-                    </ul>
+                        <div id="income-sum" class="expenses-sum">
+                            <h2>Suma przychodów wynosi:</h2>
+                            <p id="income-sum-value">0</p>
+                        </div>
+                    </div>
+                    
+
                 </div>
             </div>
             <div class="box">
@@ -38,23 +49,29 @@
                     <input value="" placeholder="podaj nazwę wydatku" id="new-expenses-name"></input>
                     <input value="" placeholder="Kwota" type="number" id="new-expenses-price"></input>
                     <button id="btn2">Dodaj</button>
-                    <ul id="ul-expenses">
+                    <div class="box-expenses">
+                        <ul id="ul-expenses" class="ul-separator">
 
-                    </ul>
+                        </ul>
+                        <div class="expenses-sum">
+                            <h2>Suma wydatków wynosi:</h2>
+                            <p id="expenses-sum-value">0</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
     <footer>
         <div class="sums">
-            <div id="income-sum" class="expenses-sum">
+            <!-- <div id="income-sum" class="expenses-sum">
                 <h1>Suma przychodów wynosi:</h1>
                 <p id="income-sum-value">0</p>
-            </div>
-            <div class="expenses-sum">
+            </div> -->
+            <!-- <div class="expenses-sum">
                 <h1>Suma wydatków wynosi:</h1>
                 <p id="expenses-sum-value">0</p>
-            </div>
+            </div> -->
         </div>
     </footer>
     <script src="app.js" defer></script>
