@@ -4,16 +4,13 @@ body, button, input {
 
 .logo {
     display: flex;
-    justify-content: center;
-   
+    justify-content: center; 
 }
 
 .money-left {
     height: 100px;
     width: 360px;
     margin: 10px auto;
-    /* background-color: rgb(56, 108, 138); */
-    /* ODCIEŃ ZIELENI NA OBRAZKU rgb(47, 132, 107) */
     border: black 5px dashed;
     border-radius: 30%;
     display: flex;
@@ -25,12 +22,12 @@ body, button, input {
     text-align: center;
     font-size: 30px;
     font-weight: bold;
-
 }
 
 .li-separator {
-    margin: 10px 0;
-    /* border: black solid 3px; */
+    margin: 10px 50px;
+    display: flex;
+    justify-content: space-between;
 }
 .budget {
     padding: 20px;
@@ -38,7 +35,6 @@ body, button, input {
     flex-wrap: wrap;
     text-align: center;
     justify-content: space-evenly;
-    /* background-color: blue; */
 }
 
 .box {
@@ -63,18 +59,9 @@ footer {
     height: 100px;
 }
 
-.sums {
-    display: flex;
-    justify-content: space-around;
-
-}
 
 .income-sum, .expenses-sum {
     text-align: center;
-    /* position:relative;
-    bottom: 10px;
-    right: 10px; */
-
 }
 
 button {
@@ -89,10 +76,10 @@ button {
     align-items: stretch;
 }
 
-/* .box-income, .box-expenses {
+.box-income, .box-expenses {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
-} */
+}
 

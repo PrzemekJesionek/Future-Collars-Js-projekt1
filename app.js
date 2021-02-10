@@ -36,9 +36,11 @@ function updateAllIncomeList() {
         incomeIdSplitMain.push(incomeIdSplit)
 
         let incomeLi = document.createElement('li');
-        incomeLi.innerText = `${income.name} :${income.price}`;
+        incomeLi.innerText = `${income.name} :${income.price} zł`;
         incomeLi.classList.add('li-separator');
         incomeLi.id = `li-income-${incomeIdSplit[1]}`;
+
+        const incomeLiDivButtons = document.createElement('div');
 
         const editIncomeBtn = document.createElement('button');
         editIncomeBtn.innerText = 'Edytuj';
@@ -66,9 +68,16 @@ function updateAllIncomeList() {
             incomeSum(allIncomeList);
             budgetSum()
         });
-        incomeLi.appendChild(deleteIncomeBtn);
-        incomeLi.appendChild(editIncomeBtn);
+        incomeLiDivButtons.appendChild(deleteIncomeBtn);
+        incomeLiDivButtons.appendChild(editIncomeBtn);
+        incomeLi.appendChild(incomeLiDivButtons);
         ulIncomeList.appendChild(incomeLi);
+
+        // incomeLi.appendChild(deleteIncomeBtn);
+        // incomeLi.appendChild(editIncomeBtn);
+        // ulIncomeList.appendChild(incomeLi);
+
+
     });
 }
 
@@ -92,7 +101,7 @@ function incomeSum(allIncomeList) {
         i1++;
     }
     let incomeSum = document.getElementById('income-sum-value');
-    incomeSum.innerText = sum1;
+    incomeSum.innerText = `${sum1} zł`;
     allIncomeSum = Number(sum1);
 };
 
@@ -138,9 +147,11 @@ function updateAllExpensesList() {
         expensesIdSplitMain.push(expensesIdSplit)
 
         let expensesLi = document.createElement('li');
-        expensesLi.innerText = `${expenses.name} :${expenses.price}`;
+        expensesLi.innerText = `${expenses.name} :${expenses.price} zł`;
         expensesLi.classList.add('li-separator');
         expensesLi.id = `li-expenses-${expensesIdSplit[1]}`;
+
+        const expensesLiDivButtons = document.createElement('div');
 
         const editExpensesBtn = document.createElement('button');
         editExpensesBtn.innerText = 'Edytuj';
@@ -168,9 +179,14 @@ function updateAllExpensesList() {
             expensesSum(allExpensesList);
             budgetSum()
         });
-        expensesLi.appendChild(deleteExpensesBtn);
-        expensesLi.appendChild(editExpensesBtn);
+        expensesLiDivButtons.appendChild(deleteExpensesBtn);
+        expensesLiDivButtons.appendChild(editExpensesBtn); 
+        expensesLi.appendChild(expensesLiDivButtons); 
         ulExpensesList.appendChild(expensesLi);
+
+        // expensesLi.appendChild(deleteExpensesBtn);
+        // expensesLi.appendChild(editExpensesBtn);
+        // ulExpensesList.appendChild(expensesLi);
     });
 }
 
@@ -193,7 +209,7 @@ function expensesSum(allExpensesList) {
         i2++;
     }
     let expensesSum = document.getElementById('expenses-sum-value');
-    expensesSum.innerText = sum2;
+    expensesSum.innerText = `${sum2} zł`;
     allExpensesSum = Number(sum2);
 };
 
